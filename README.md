@@ -30,7 +30,7 @@ Ce projet est une application frontend développée en ReactJS pour gérer un sy
    git clone https://github.com/mohamedfeki414/crud-ecommerce.git
    cd crud-ecommerce
    npm install
-##Structure du projet
+## Structure du projet
 
 src/
 ├── components/
@@ -53,14 +53,14 @@ src/
 ├── App.jsx
 ├── main.jsx
 └── index.html   
-##Utilisation
+## Utilisation
 Accédez à l'application via http://localhost:3000.
 Utilisez le menu pour accéder aux fonctionnalités de gestion des catégories, sous-catégories, et articles.
 Manipulez les données directement via l'interface utilisateur (ajout, modification, suppression).
 API Backend
 L'application nécessite un backend REST API pour fonctionner. Par défaut, les appels sont effectués à http://localhost:3001/api.
 
-##Auteur
+## Auteur
 Mohamed Feki - Profil GitHub
-##Licence
+## Licence
 Ce projet est sous licence MIT. Consultez le fichier LICENSE dans le dépôt pour plus d'informations.
