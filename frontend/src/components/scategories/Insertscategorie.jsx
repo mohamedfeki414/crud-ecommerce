@@ -3,13 +3,17 @@ import { Col, Form, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const Insertcategorie = () => {
-  const [categorie, setCategorie] = useState({});
-  const [categories, setCategories] = useState([]); 
+const Insertscategorie = () => {
+  const [categorie, setCategorie] = useState({
+    nomcategorie: '',
+    imagecategorie: '',
+    nomscategorie: '',
+    imagescategorie: ''
+  });
 
+  const [categories, setCategories] = useState([]); 
   const navigate = useNavigate();
 
-  
   const fetchCategories = async () => {
     try {
       const response = await axios.get("http://localhost:3001/api/categories");
@@ -23,9 +27,15 @@ const Insertcategorie = () => {
     fetchCategories();
   }, []);
 
-
   const handleSave = async (e) => {
     e.preventDefault();
+    
+    // Vérification simple avant envoi
+    if (!categorie.nomcategorie || !categorie.imagecategorie || !categorie.nomscategorie || !categorie.imagescategorie) {
+      alert('Veuillez remplir tous les champs!');
+      return;
+    }
+
     try {
       await axios.post("http://localhost:3001/api/scategories", categorie)
         .then((response) => {
@@ -47,9 +57,9 @@ const Insertcategorie = () => {
               value={categorie.nomcategorie}
               onChange={(e) => setCategorie({ ...categorie, nomcategorie: e.target.value })}
             >
-              {/* Afficher les options de catégories */}
+              <option value="">Sélectionnez une catégorie</option>
               {categories.map((cat, index) => (
-                <option key={cat._id} value={cat._id}>
+                <option key={cat._id} value={cat.nomcategorie}>
                   {cat.nomcategorie}
                 </option>
               ))}
@@ -68,7 +78,6 @@ const Insertcategorie = () => {
           </Form.Group>
         </Row>
 
-        
         <Row>
           <Form.Group as={Col} mb="6">
             <Form.Label>Nom de la Sous-Catégorie</Form.Label>
@@ -92,7 +101,6 @@ const Insertcategorie = () => {
           </Form.Group>
         </Row>
 
-        
         <button className="btn btn-success btn-sm" onClick={handleSave}>
           <i className="fa-solid fa-floppy-disk"></i> Save
         </button>
@@ -107,4 +115,5 @@ const Insertcategorie = () => {
   );
 };
 
-export default Insertcategorie;
+export default Insertscategorie;
+

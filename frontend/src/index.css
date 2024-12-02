@@ -1,68 +1,79 @@
+/* Définition des styles globaux */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; /* Définition de la police */
+  line-height: 1.5; /* Hauteur de ligne pour une meilleure lisibilité */
+  font-weight: 400; /* Poids de police normal */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light dark; /* Déclare les modes de couleurs (clair et sombre) */
+  color: rgba(255, 255, 255, 0.87); /* Couleur du texte par défaut (blanc, légèrement transparent) */
+  background-color: #242424; /* Couleur de fond par défaut (gris foncé) */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none; /* Empêche la synthèse de police */
+  text-rendering: optimizeLegibility; /* Améliore la lisibilité du texte */
+  -webkit-font-smoothing: antialiased; /* Amélioration de l'affichage des polices sur Webkit (Chrome, Safari) */
+  -moz-osx-font-smoothing: grayscale; /* Amélioration de l'affichage des polices sur Mac OS */
 }
 
+/* Styles des liens */
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  font-weight: 500; /* Poids de police semi-gras */
+  color: #646cff; /* Couleur des liens (bleu clair) */
+  text-decoration: inherit; /* Supprime la décoration du texte */
 }
+
 a:hover {
-  color: #535bf2;
+  color: #535bf2; /* Couleur du lien au survol (bleu plus foncé) */
 }
 
+/* Styles du corps de la page */
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  margin: 0; /* Supprime la marge par défaut */
+  display: flex; /* Utilisation de Flexbox pour le centrage du contenu */
+  place-items: center; /* Centrer le contenu horizontalement et verticalement */
+  min-width: 320px; /* Largeur minimale de la page */
+  min-height: 100vh; /* Hauteur minimale pour couvrir toute la fenêtre */
 }
 
+/* Styles des titres */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3.2em; /* Taille de la police du titre */
+  line-height: 1.1; /* Hauteur de ligne du titre pour aérer le texte */
 }
 
+/* Styles des boutons */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  border-radius: 8px; /* Coins arrondis pour les boutons */
+  border: 1px solid transparent; /* Bordure transparente par défaut */
+  padding: 0.6em 1.2em; /* Espacement interne des boutons */
+  font-size: 1em; /* Taille de la police des boutons */
+  font-weight: 500; /* Poids de police semi-gras */
+  font-family: inherit; /* Hérite de la police définie dans :root */
+  background-color: #1a1a1a; /* Couleur de fond du bouton (gris foncé) */
+  cursor: pointer; /* Pointeur sur le bouton pour indiquer qu'il est cliquable */
+  transition: border-color 0.25s; /* Transition douce pour la couleur de la bordure */
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: #646cff; /* Change la bordure au survol (bleu clair) */
 }
+
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto -webkit-focus-ring-color; /* Bordure visible lors de la mise au focus (accessibilité) */
 }
 
+/* Media query pour le mode clair */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #213547; /* Couleur du texte en mode clair (gris foncé) */
+    background-color: #ffffff; /* Fond blanc en mode clair */
   }
+
   a:hover {
-    color: #747bff;
+    color: #747bff; /* Couleur du lien au survol en mode clair */
   }
+
   button {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Fond clair pour les boutons en mode clair */
   }
 }
