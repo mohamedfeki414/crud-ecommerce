@@ -31,6 +31,7 @@ function App() {
         <Route path="/scategories/add" element={<Insertscategorie/>}/>
         <Route path="/scategories/edit/:id" element={<Editscategorie/>}/>
         <Route path="/client" element={<Listarticlecard/>}  />
+        <Route path="/cart" element={<cart/>}  />
         
 
       </Routes>
