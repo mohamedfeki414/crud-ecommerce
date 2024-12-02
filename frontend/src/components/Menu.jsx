@@ -9,7 +9,7 @@ import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
-
+import { useShoppingCart } from 'use-shopping-cart';
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
     right: -3,
@@ -20,6 +20,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Menu = () => {
+  const {cardCount}=useShoppingCart();
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -39,7 +40,7 @@ const Menu = () => {
               <Nav.Link as={Link} to="/client">Clients</Nav.Link>
               <Nav.Link as={Link} to="/Cart">
                 <IconButton aria-label="cart">
-                  <StyledBadge badgeContent={4} color="secondary">
+                  <StyledBadge badgeContent={cartCount} color="secondary">
                     <ShoppingCartIcon />
                   </StyledBadge>
                 </IconButton>
