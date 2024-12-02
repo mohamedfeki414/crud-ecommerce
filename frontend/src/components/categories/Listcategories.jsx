@@ -63,7 +63,7 @@ const Listcategories = () => {
         }
       </tbody>
       </table>
-      <h1>Liste des categories</h1>
+      
     </div>
   )
 }
