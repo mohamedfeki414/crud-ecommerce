@@ -9,6 +9,16 @@ const Cards = ({article}) => {
   const {addItem} = useShoppingCart()
 
   const addToCart=(product)=>{
+    const target = {
+      id : product.id,
+      title : product.designation,
+      image : product.imageart,
+      price : product.prix,
+      qtestock : product.qtestock,
+      quantity : 1
+      };
+      addItem(target);
+      console.log('Item added to cart:', target);
     
   }
   return (
