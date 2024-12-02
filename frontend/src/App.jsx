@@ -11,6 +11,7 @@ import Insertscategorie from "./components/scategories/Insertscategorie"
 import Editcategorie from "./components/categories/Editcategorie"
 import Editscategorie from "./components/scategories/Editscategorie"
 import Listarticlecard from "./components/client/Listarticlecard"
+import Cart from "./components/client/cart"
 import { CartProvider } from "use-shopping-cart"
 function App() {
   return (
