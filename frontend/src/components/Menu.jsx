@@ -20,7 +20,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Menu = () => {
-  const {cardCount}=useShoppingCart();
+  const {cartCount=0}=useShoppingCart();
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
