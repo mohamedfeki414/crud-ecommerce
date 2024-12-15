@@ -40,7 +40,7 @@ const Listarticles = () => {
       <table className="table table-striped">
         <thead>
           <tr>
-            <th>Référence</th>
+            <th>Réference</th>
             <th>Désignation</th>
             <th>Marque</th>
             <th>Stock</th>
