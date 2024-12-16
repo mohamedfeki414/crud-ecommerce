@@ -65,6 +65,36 @@ const Affichearticles = ({ articles }) => {
         /> 
         </Box>), 
         }, 
+        { 
+            accessorKey: '_id', 
+            header: 'actions', 
+            size: 100, 
+            Cell: ({ cell, row }) => ( 
+            <div > 
+            <Button 
+            onClick={() => { 
+            console.log("modification ...") 
+            }} 
+            variant="warning" 
+            size="md" 
+            className="text-warning btn-link edit" 
+            > 
+            <i class="fa-solid fa-pen-to-square"></i> 
+            </Button> 
+            <Button 
+            onClick={(e) => { 
+              deleteProduct(cell.row.original._id,cell.row.original.reference, 
+e); 
+            }} 
+            variant="danger" 
+            size="md" 
+            className="text-danger btn-link delete" 
+            >
+                  <i className="fa fa-trash" /> 
+            </Button> 
+            </div> 
+            ), 
+            },
 
       
     ],

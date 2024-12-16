@@ -31,7 +31,7 @@ const Listarticlestable = () => {
   };
   return (
     <div>
-      <Affichearticles articles={articles}/>
+      <Affichearticles articles={articles} handleDelete={handleDelete}/>
     </div>
   )
 }
