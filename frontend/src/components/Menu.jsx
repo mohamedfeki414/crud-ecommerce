@@ -38,6 +38,7 @@ const Menu = () => {
               <Nav.Link as={Link} to="/scategories">Sous catégories</Nav.Link>
               <Nav.Link as={Link} to="/articles">Articles</Nav.Link>
               <Nav.Link as={Link} to="/client">Clients</Nav.Link>
+              <Nav.Link as={Link} to="/listart">Articles Table</Nav.Link>
               <Nav.Link as={Link} to="/Cart">
                 <IconButton aria-label="cart">
                   <StyledBadge badgeContent={cartCount} color="secondary">
