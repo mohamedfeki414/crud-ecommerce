@@ -16,6 +16,7 @@ import Listarticlecard from "./components/client/Listarticlecard";
 
 import { CartProvider } from "use-shopping-cart";
 import Cart from "./components/client/cart";
+import Listarticlestable from "./components/articles/Listarticlestable";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/scategories/edit/:id" element={<Editscategorie />} />
           <Route path="/client" element={<Listarticlecard />} />
           <Route path="/Cart" element={< Cart/>}></Route>
+          <Route path="/listart" element={<Listarticlestable />} />
         </Routes>
       </Router>
     </CartProvider>
