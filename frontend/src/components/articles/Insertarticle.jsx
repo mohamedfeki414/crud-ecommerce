@@ -50,7 +50,7 @@ const Insertarticle = () => {
               type="text"
               placeholder="Référence"
               value={article.reference}
-              onChange={(e) => setArticle({ ...article, reference: e.target.value })}
+              onChange={(e) => setArticle({ ...article, reference: e.target.value })} //on peut ajouter une methode change pour chaque champ de formulaire 
             />
           </Form.Group>
           <Form.Group as={Col} mb="6">
